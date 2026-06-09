@@ -1,5 +1,5 @@
 function App() {
-   const nomes = [ 'Lucas', 'Maria', 'João', 'Ana' ];
+   const nomes = [ 'Lucas', 'Maria', 'João', 'Ana', 'José' ];
    const nota = 3;
 
    
