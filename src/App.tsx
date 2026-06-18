@@ -1,40 +1,35 @@
 function App() {
-   const nomes = [ 'Lucas', 'Maria', 'João', 'Ana', 'José' ];
-   const nota = 3;
+   let estrelas = []
+   let count = 0
+   let mensagem = ""
 
-   
-   let numeros = [];
-   for (let i = 1; i <= 5; i++) {
-     numeros.push(i);
+   for (let i = 0; i < 5; i++) {
+      estrelas.push('⭐')
+
+      if(count >= 18){
+        mensagem = "Boa noite"
+      }
+      if(count === 24){
+        count = 0
+      } 
     }
-
-  return (
-    
-    <div style={{ padding: '20px' }}>
-      <h2>1. Estrelas com 'repeat'</h2>
-      <p style={{ fontSize: '24px' }}>{'⭐'.repeat(nota)}</p>
-
-      <h2>2. Nomes com 'map'</h2>
-      <ul>
-        {nomes.map((nome, index) => (
-          <li key={index}>{nome}</li>
-        ))}
-      </ul>
       
-      <h2>3. Números com 'for'</h2>
-      <div>
-        {numeros.map((n) => (
-          <span key={n}>{n}</span>
+    return (
+      <>
+      
+      <section>
+        {estrelas.map((estrela, index) => {
+          return <p>item {index} : {estrela}</p>
+        })}
+       </section>
+      </>
+
+    )
+}  
 
 
-        ))}
-      </div>
-    </div>
-
-
-  );
-}
+        
 
 export default App;
-  
+
    
