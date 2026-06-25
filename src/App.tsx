@@ -1,28 +1,34 @@
+import { useState } from 'react'
+
+
+
+
+
 function App() {
-   let estrelas = []
-   let count = 0
-   let mensagem = ""
+  const [count, setCount] = useState(0)
 
-   for (let i = 0; i < 5; i++) {
-      estrelas.push('⭐')
-
-      if(count >= 18){
-        mensagem = "Boa noite"
-      }
-      if(count === 24){
-        count = 0
-      } 
-    }
-      
-    return (
+    
+  return (
       <>
       
-      <section>
-        {estrelas.map((estrela, index) => {
-          return <p>item {index} : {estrela}</p>
-        })}
-       </section>
+      <section id="center">
+
+        <div>
+          <h1>Get started</h1>
+          <p>
+            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+          </p>
+        </div>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+        >
+          count is {count}
+        </button>
+      </section>
       </>
+      
 
     )
 }  
